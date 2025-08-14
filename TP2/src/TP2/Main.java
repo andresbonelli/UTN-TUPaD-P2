@@ -9,22 +9,25 @@ public class Main {
         abrirScanner();
         
         // Ejercicios
-        ej01anioBisiesto();
-        ej02mayorDeTresNumeros();
-        ej03clasificarEdades();
-        ej04descuentosPorCategoria();
-        ej05sumaNumerosPares();
-        ej06contadorPositivosNegativos();
-        ej07validacionNota();
-        ej08calculoPrecio();
-        ej09costoEnvio();
-        ej10actualizarStock();
-        ej11descuentoEspecial();
-        ej12modificacionPrecios();
-        ej13impresionRecursiva();
-        
-        cerrarScanner();
-        
+        try {
+//            ej01anioBisiesto();
+//            ej02mayorDeTresNumeros();
+//            ej03clasificarEdades();
+//            ej04descuentosPorCategoria();
+//            ej05sumaNumerosPares();
+//            ej06contadorPositivosNegativos();
+//            ej07validacionNota();
+//            ej08calculoPrecio();
+            ej09costoEnvio();
+            ej10actualizarStock();
+            ej11descuentoEspecial();
+            ej12modificacionPrecios();
+            ej13impresionRecursiva();
+        } catch(Exception e) {
+            System.out.println("Error: "+e);
+        } finally {
+            cerrarScanner();
+        }  
     }
     
 }

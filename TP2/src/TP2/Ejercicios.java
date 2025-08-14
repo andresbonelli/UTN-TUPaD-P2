@@ -174,7 +174,8 @@ class Ejercicios {
         } else if (zona.equalsIgnoreCase("Internacional")) {
             return 10.0 * peso;
         } else {
-            throw new IllegalArgumentException("Zona inválida. Debe ser Nacional o Internacional.");
+            System.out.println("Zona inválida. Debe ser Nacional o Internacional.");
+            return 0;
         }
     }
     
