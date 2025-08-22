@@ -11,7 +11,7 @@ Este repositorio almacena los trabajos prácticos realizados durante la cursada 
 
 ## Requisitos:
 - Java 21 o superior
-- Apache Maven 4 para compilar y ejecutar
+- Apache Maven 3.x para compilar y ejecutar
 ### Ejecución
 ```cmd
 cd <Directorio de TP>
