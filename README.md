@@ -11,4 +11,14 @@ Este repositorio almacena los trabajos prácticos realizados durante la cursada 
 
 ## Requisitos:
 - Java 21 o superior
-- Apache Maven para compilar y ejecutar
+- Apache Maven 4 para compilar y ejecutar
+### Ejecución
+```cmd
+cd <Directorio de TP>
+```
+```cmd
+mvn clean package
+```
+```cmd
+mvn exec:java -Dexec.mainClass="dev.andresbonelli.Main"
+```
