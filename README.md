@@ -10,5 +10,5 @@
 Este repositorio almacena los trabajos prácticos realizados durante la cursada de la asigantura **Programación 2**.  
 
 ## Requisitos:
-- Java 8 o superior
+- Java 21 o superior
 - Apache Maven para compilar y ejecutar
