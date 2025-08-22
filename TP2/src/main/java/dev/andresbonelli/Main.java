@@ -1,6 +1,6 @@
-package TP2;
+package dev.andresbonelli;
 
-import static TP2.Ejercicios.*;
+import static dev.andresbonelli.Ejercicios.*;
 
 public class Main {
 

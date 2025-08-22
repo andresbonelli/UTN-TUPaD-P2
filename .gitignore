@@ -1,4 +1,8 @@
+# IDE
 /TP2/nbproject/private/
 /TP2/build/
-.DS_Store
 /TP2/dist/
+.idea
+
+# Mac OSX
+.DS_Store

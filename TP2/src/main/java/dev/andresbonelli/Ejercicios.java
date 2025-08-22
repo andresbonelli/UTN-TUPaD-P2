@@ -1,4 +1,4 @@
-package TP2;
+package dev.andresbonelli;
 
 import java.util.Scanner;
 
