@@ -11,14 +11,4 @@ Este repositorio almacena los trabajos prácticos realizados durante la cursada 
 
 ## Requisitos:
 - Java 8 o superior
-- Apache Ant 1.10+ (o un IDE que soporte proyectos Ant: NetBeans, IntelliJ IDEA, VS Code con extensión)
-- Consola/terminal
-
- ## Compilar y ejecutar con Ant
-Compilar:
-```ant clean compile```
-Generar JAR:
-```ant jar```
-Ejecutar:
-```ant run```
-   
+- Apache Maven para compilar y ejecutar
