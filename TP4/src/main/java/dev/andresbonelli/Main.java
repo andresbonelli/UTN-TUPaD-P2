@@ -10,12 +10,12 @@ public class Main {
         Empleado e1 = new Empleado(1, "Ana", "Gerente de Ventas", 75000.0);
         System.out.println("   ✅ " + e1);
         System.out.println("\n2. Ejemplo de crear empleado con constructor sobrecargado...\n");
-        Empleado e2 = new Empleado("Juan", "Desarrollador", 60000.0);
+        Empleado e2 = new Empleado("Juan", "Desarrollador");
         System.out.println("   ✅ " + e2);
         System.out.println("\n3. Creando más empleados...");
-        Empleado e3 = new Empleado("María", "Diseñadora UX", 55000.0);
+        Empleado e3 = new Empleado("María", "Diseñadora UX");
         Empleado e4 = new Empleado(10, "Carlos", "Analista Funcional", 55000.0);
-        Empleado e5 = new Empleado("Laura", "PO",70000.0);
+        Empleado e5 = new Empleado("Laura", "PO");
         System.out.println("   ✅ " + e3);
         System.out.println("   ✅ " + e4);
         System.out.println("   ✅ " + e5);

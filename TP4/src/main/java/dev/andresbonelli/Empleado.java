@@ -27,11 +27,11 @@ public class Empleado {
      * Constructor que recibe solo nombre, puesto y salario y
      * asigna un ID automáticamente y un salario por defecto.
      */
-    public Empleado(String nombre, String puesto, double salario) {
+    public Empleado(String nombre, String puesto) {
         this.id = siguienteId;
         this.nombre = nombre;
         this.puesto = puesto;
-        this.salario = salario;
+        this.salario = 45000.0; // Salario por defecto
         totalEmpleados++;
         siguienteId++;
     }
