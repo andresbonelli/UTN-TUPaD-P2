@@ -10,5 +10,15 @@
 Este repositorio almacena los trabajos prácticos realizados durante la cursada de la asigantura **Programación 2**.  
 
 ## Requisitos:
-- Java 8 o superior
-- Apache Maven para compilar y ejecutar
+- Java 21 o superior
+- Apache Maven 3.x para compilar y ejecutar
+### Ejecución
+```cmd
+cd <Directorio de TP>
+```
+```cmd
+mvn clean package
+```
+```cmd
+mvn exec:java -Dexec.mainClass="dev.andresbonelli.Main"
+```
