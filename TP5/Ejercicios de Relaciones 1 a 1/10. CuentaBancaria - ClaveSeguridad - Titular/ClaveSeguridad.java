@@ -1,6 +1,6 @@
 import java.util.Date;
 
-class ClaveSeguridad {
+public class ClaveSeguridad {
     private String codigo;
     private Date ultimaModificacion;
 
