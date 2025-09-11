@@ -1,0 +1,27 @@
+@startuml Ejercicio1_Pasaporte
+
+class Pasaporte {
+    -numero: String
+    -fechaEmision: String
+    +getNumero(): String
+    +getFechaEmision(): String
+    +setTitular(titular: Titular): void
+}
+
+class Foto {
+    -imagen: String
+    -formato: String
+    +getImagen(): String
+    +getFormato(): String
+}
+
+class Titular {
+    -nombre: String
+    -dni: String
+    +getNombre(): String
+    +getDni(): String
+}
+
+Pasaporte *-- Foto : "composición"
+Pasaporte "1" <--> "1" Titular : "asociación\nbidireccional"
+@enduml
