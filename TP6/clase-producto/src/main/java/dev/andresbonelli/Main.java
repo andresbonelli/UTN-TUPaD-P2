@@ -10,7 +10,7 @@ public class Main {
         inventario.agregarProducto(new Producto( "Arroz", 1500.0, 50, CategoriaProducto.ALIMENTOS));
         inventario.agregarProducto(new Producto( "Smartphone", 25000.0, 15, CategoriaProducto.ELECTRONICA));
         inventario.agregarProducto(new Producto("Camisa", 2500.0, 30, CategoriaProducto.ROPA));
-        inventario.agregarProducto(new Producto("Sartén", 1800.0, 20, CategoriaProducto.HOGAR));
+        inventario.agregarProducto(new Producto(10L,"Sartén", 1800.0, 20, CategoriaProducto.HOGAR));
         inventario.agregarProducto(new Producto("Leche", 800.0, 100, CategoriaProducto.ALIMENTOS));
 
         // 2. Listar todos los productos
@@ -29,7 +29,11 @@ public class Main {
 
         // 5. Eliminar un producto
         System.out.println("\n=== ELIMINANDO PRODUCTO ===");
-        inventario.eliminarProducto(3L);
+        Producto eliminado = inventario.eliminarProducto(3L);
+        if (eliminado != null) {
+            System.out.println("Producto eliminado:");
+            eliminado.mostrarInfo();
+        }
         inventario.listarProductos();
 
         // 6. Actualizar stock
