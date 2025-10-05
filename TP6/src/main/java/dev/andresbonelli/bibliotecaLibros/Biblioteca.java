@@ -1,6 +1,7 @@
 package dev.andresbonelli.bibliotecaLibros;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class Biblioteca {
@@ -66,19 +67,11 @@ public class Biblioteca {
 
     public void mostrarAutoresDisponibles() {
         System.out.println("\n=== AUTORES DISPONIBLES ===");
-        List<Long> autoresMostrados = new ArrayList<>();
-
-        for (Libro libro : libros) {
-            Long autorId = libro.getAutor().getId();
-            if (!autoresMostrados.contains(autorId)) {
-                libro.getAutor().mostrarInfo();
-                autoresMostrados.add(autorId);
-            }
-        }
-
-        if (autoresMostrados.isEmpty()) {
-            System.out.println("No se encontraron autores");
-        }
+        libros.stream()
+                .map(Libro::getAutor)
+                .distinct() // requiere que Autor tenga implementado equals() y hashCode()
+                .toList()
+                .forEach(Autor::mostrarInfo);
     }
 
     public String getNombre() { return nombre; }

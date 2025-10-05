@@ -1,5 +1,7 @@
 package dev.andresbonelli.bibliotecaLibros;
 
+import java.util.Objects;
+
 public class Autor {
     private final Long id;
     private String nombre;
@@ -41,5 +43,17 @@ public class Autor {
     @Override
     public String toString() {
         return nombre + " (" + nacionalidad + ")";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Autor autor = (Autor) o;
+        return Objects.equals(nombre, autor.nombre) && Objects.equals(nacionalidad, autor.nacionalidad);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre, nacionalidad);
     }
 }
