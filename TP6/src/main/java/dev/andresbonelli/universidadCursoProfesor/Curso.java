@@ -1,4 +1,4 @@
-package dev.andresbonelli;
+package dev.andresbonelli.universidadCursoProfesor;
 
 public class Curso {
     private final String codigo;

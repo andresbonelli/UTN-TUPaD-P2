@@ -1,4 +1,4 @@
-package dev.andresbonelli;
+package dev.andresbonelli.claseProducto;
 
 
 public class Main {

@@ -1,4 +1,4 @@
-package dev.andresbonelli;
+package dev.andresbonelli.bibliotecaLibros;
 
 public class Autor {
     private final Long id;

@@ -1,4 +1,4 @@
-package dev.andresbonelli;
+package dev.andresbonelli.bibliotecaLibros;
 
 public class Libro {
     private final String isbn;

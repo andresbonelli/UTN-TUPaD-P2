@@ -1,4 +1,4 @@
-package dev.andresbonelli;
+package dev.andresbonelli.universidadCursoProfesor;
 
 public class Main {
     public static void main(String[] args) {
