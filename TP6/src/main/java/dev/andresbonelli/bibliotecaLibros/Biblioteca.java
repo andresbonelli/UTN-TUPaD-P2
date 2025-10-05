@@ -1,12 +1,11 @@
 package dev.andresbonelli.bibliotecaLibros;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 public class Biblioteca {
-    private String nombre;
-    private List<Libro> libros;
+    private final String nombre;
+    private final List<Libro> libros;
 
     public Biblioteca(String nombre) {
         this.nombre = nombre;
@@ -20,23 +19,19 @@ public class Biblioteca {
     }
 
     public void listarLibros() {
-        System.out.println("\n=== LIBROS EN LA BIBLIOTECA '" + nombre + "' ===");
         if (libros.isEmpty()) {
             System.out.println("No hay libros en la biblioteca.");
             return;
         }
-        for (Libro libro : libros) {
-            libro.mostrarInfo();
-        }
+        System.out.println("\n=== LIBROS EN LA BIBLIOTECA '" + nombre + "' ===");
+        libros.forEach(Libro::mostrarInfo);
     }
 
     public Libro buscarLibroPorIsbn(String isbn) {
-        for (Libro libro : libros) {
-            if (libro.getIsbn().equals(isbn)) {
-                return libro;
-            }
-        }
-        return null;
+        return libros.stream()
+                .filter(libro -> libro.getIsbn().equals(isbn))
+                .findFirst()
+                .orElse(null);
     }
 
     public Libro eliminarLibro(String isbn) {
@@ -52,20 +47,21 @@ public class Biblioteca {
     }
 
     public void filtrarLibrosPorAnio(int anio) {
+        if (libros.isEmpty()) {
+            System.out.println("No hay libros en la biblioteca.");
+            return;
+        }
         System.out.println("\n=== LIBROS PUBLICADOS EN " + anio + " ===");
-        boolean encontrado = false;
-        for (Libro libro : libros) {
-            if (libro.getAnioPublicacion() == anio) {
-                libro.mostrarInfo();
-                encontrado = true;
-            }
-        }
-        if (!encontrado) {
-            System.out.println("No hay libros publicados en " + anio);
-        }
+        libros.stream()
+                .filter(libro -> libro.getAnioPublicacion() == anio)
+                .forEach(Libro::mostrarInfo);
     }
 
     public void mostrarAutoresDisponibles() {
+        if (libros.isEmpty()) {
+            System.out.println("No hay libros en la biblioteca.");
+            return;
+        }
         System.out.println("\n=== AUTORES DISPONIBLES ===");
         libros.stream()
                 .map(Libro::getAutor)
